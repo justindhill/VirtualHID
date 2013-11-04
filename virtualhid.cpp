@@ -167,9 +167,9 @@ int num_kids(IOService *provider)
 	OSIterator *kids;
 	const char* poo = provider->getName();
 	IOLog("name: %s \n", poo);
-	if (kids = provider->getChildIterator(gIOServicePlane)) {
+	if ((kids = provider->getChildIterator(gIOServicePlane))) {
 		IOService *nextkid;
-		while (nextkid = (IOService*)kids->getNextObject()) {
+		while ((nextkid = (IOService*)kids->getNextObject())) {
 			total += num_kids(nextkid);
 		}
 		kids->release();
