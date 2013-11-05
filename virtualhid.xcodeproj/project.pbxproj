@@ -11,6 +11,11 @@
 		32D94FC80562CBF700B6AF17 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		32D94FCA0562CBF700B6AF17 /* virtualhid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A224C3FFF42367911CA2CB7 /* virtualhid.cpp */; settings = {ATTRIBUTES = (); }; };
 		B250A1860DC852930010C7B2 /* ChangeLog.txt in Resources */ = {isa = PBXBuildFile; fileRef = B250A1850DC852930010C7B2 /* ChangeLog.txt */; };
+		FC2218EC182883CA009B8C29 /* virtualhid.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A224C3EFF42367911CA2CB7 /* virtualhid.h */; };
+		FC2218ED182883CA009B8C29 /* wiimote_types.h in Headers */ = {isa = PBXBuildFile; fileRef = FC35FDB318285BC200CEFA96 /* wiimote_types.h */; };
+		FC2218EF182883CA009B8C29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		FC2218F0182883CA009B8C29 /* ChangeLog.txt in Resources */ = {isa = PBXBuildFile; fileRef = B250A1850DC852930010C7B2 /* ChangeLog.txt */; };
+		FC2218F2182883CA009B8C29 /* virtualhid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A224C3FFF42367911CA2CB7 /* virtualhid.cpp */; settings = {ATTRIBUTES = (); }; };
 		FC35FDB418285BC200CEFA96 /* wiimote_types.h in Headers */ = {isa = PBXBuildFile; fileRef = FC35FDB318285BC200CEFA96 /* wiimote_types.h */; };
 /* End PBXBuildFile section */
 
@@ -19,14 +24,24 @@
 		1A224C3EFF42367911CA2CB7 /* virtualhid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = virtualhid.h; sourceTree = "<group>"; };
 		1A224C3FFF42367911CA2CB7 /* virtualhid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = virtualhid.cpp; sourceTree = "<group>"; };
 		32D94FCF0562CBF700B6AF17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32D94FD00562CBF700B6AF17 /* virtualhid.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = virtualhid.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		32D94FD00562CBF700B6AF17 /* VirtualHID32.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VirtualHID32.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA8362C06AD9B9200E5AC22 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
 		B250A1850DC852930010C7B2 /* ChangeLog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog.txt; sourceTree = "<group>"; };
+		FC2218DD1828837F009B8C29 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = System/Library/Frameworks/Kernel.framework; sourceTree = SDKROOT; };
+		FC2218F8182883CA009B8C29 /* VirtualHID64.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VirtualHID64.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2218F9182883CA009B8C29 /* Info-64.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-64.plist"; path = "/Users/jhill/Desktop/VirtualHID/Info-64.plist"; sourceTree = "<absolute>"; };
 		FC35FDB318285BC200CEFA96 /* wiimote_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wiimote_types.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		32D94FCB0562CBF700B6AF17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC2218F3182883CA009B8C29 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +58,7 @@
 				247142CAFF3F8F9811CA285C /* Source */,
 				8DA8362C06AD9B9200E5AC22 /* Kernel.framework */,
 				089C167CFE841241C02AAC07 /* Resources */,
+				FC2218DB1828837F009B8C29 /* Frameworks */,
 				19C28FB6FE9D52B211CA2CBB /* Products */,
 			);
 			name = virtualhid;
@@ -52,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				32D94FCF0562CBF700B6AF17 /* Info.plist */,
+				FC2218F9182883CA009B8C29 /* Info-64.plist */,
 				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
 			);
 			name = Resources;
@@ -60,7 +77,8 @@
 		19C28FB6FE9D52B211CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				32D94FD00562CBF700B6AF17 /* virtualhid.kext */,
+				32D94FD00562CBF700B6AF17 /* VirtualHID32.kext */,
+				FC2218F8182883CA009B8C29 /* VirtualHID64.kext */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +93,22 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
+		FC2218DB1828837F009B8C29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC2218DC1828837F009B8C29 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC2218DC1828837F009B8C29 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC2218DD1828837F009B8C29 /* Kernel.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -87,12 +121,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FC2218EB182883CA009B8C29 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2218EC182883CA009B8C29 /* virtualhid.h in Headers */,
+				FC2218ED182883CA009B8C29 /* wiimote_types.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		32D94FC30562CBF700B6AF17 /* virtualhid */ = {
+		32D94FC30562CBF700B6AF17 /* VirtualHID 32-bit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB91D908733DB10010E9CD /* Build configuration list for PBXNativeTarget "virtualhid" */;
+			buildConfigurationList = 1DEB91D908733DB10010E9CD /* Build configuration list for PBXNativeTarget "VirtualHID 32-bit" */;
 			buildPhases = (
 				32D94FC50562CBF700B6AF17 /* Headers */,
 				32D94FC70562CBF700B6AF17 /* Resources */,
@@ -104,10 +147,30 @@
 			);
 			dependencies = (
 			);
-			name = virtualhid;
+			name = "VirtualHID 32-bit";
 			productInstallPath = "$(SYSTEM_LIBRARY_DIR)/Extensions";
 			productName = virtualhid;
-			productReference = 32D94FD00562CBF700B6AF17 /* virtualhid.kext */;
+			productReference = 32D94FD00562CBF700B6AF17 /* VirtualHID32.kext */;
+			productType = "com.apple.product-type.kernel-extension.iokit";
+		};
+		FC2218EA182883CA009B8C29 /* VirtualHID 64-bit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC2218F5182883CA009B8C29 /* Build configuration list for PBXNativeTarget "VirtualHID 64-bit" */;
+			buildPhases = (
+				FC2218EB182883CA009B8C29 /* Headers */,
+				FC2218EE182883CA009B8C29 /* Resources */,
+				FC2218F1182883CA009B8C29 /* Sources */,
+				FC2218F3182883CA009B8C29 /* Frameworks */,
+				FC2218F4182883CA009B8C29 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "VirtualHID 64-bit";
+			productInstallPath = "$(SYSTEM_LIBRARY_DIR)/Extensions";
+			productName = virtualhid;
+			productReference = FC2218F8182883CA009B8C29 /* VirtualHID64.kext */;
 			productType = "com.apple.product-type.kernel-extension.iokit";
 		};
 /* End PBXNativeTarget section */
@@ -129,7 +192,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				32D94FC30562CBF700B6AF17 /* virtualhid */,
+				32D94FC30562CBF700B6AF17 /* VirtualHID 32-bit */,
+				FC2218EA182883CA009B8C29 /* VirtualHID 64-bit */,
 			);
 		};
 /* End PBXProject section */
@@ -144,10 +208,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FC2218EE182883CA009B8C29 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2218EF182883CA009B8C29 /* InfoPlist.strings in Resources */,
+				FC2218F0182883CA009B8C29 /* ChangeLog.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXRezBuildPhase section */
 		32D94FCC0562CBF700B6AF17 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC2218F4182883CA009B8C29 /* Rez */ = {
 			isa = PBXRezBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -162,6 +242,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				32D94FCA0562CBF700B6AF17 /* virtualhid.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC2218F1182883CA009B8C29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2218F2182883CA009B8C29 /* virtualhid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,7 +280,7 @@
 				INFOPLIST_PREPROCESS = YES;
 				MODULE_NAME = com.veltrop.taylor.driver.virtualhid;
 				MODULE_VERSION = 1.0.0;
-				PRODUCT_NAME = virtualhid;
+				PRODUCT_NAME = VirtualHID32;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = kext;
 			};
@@ -209,7 +297,7 @@
 				INFOPLIST_PREPROCESS = YES;
 				MODULE_NAME = com.veltrop.taylor.driver.virtualhid;
 				MODULE_VERSION = 1.0.0;
-				PRODUCT_NAME = virtualhid;
+				PRODUCT_NAME = VirtualHID32;
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = kext;
 			};
@@ -236,10 +324,46 @@
 			};
 			name = Release;
 		};
+		FC2218F6182883CA009B8C29 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "VirtualHID 32-bit copy-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				MODULE_NAME = com.veltrop.taylor.driver.virtualhid;
+				MODULE_VERSION = 1.0.0;
+				PRODUCT_NAME = VirtualHID64;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		FC2218F7182883CA009B8C29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				INFOPLIST_FILE = "VirtualHID 32-bit copy-Info.plist";
+				INFOPLIST_PREPROCESS = YES;
+				MODULE_NAME = com.veltrop.taylor.driver.virtualhid;
+				MODULE_VERSION = 1.0.0;
+				PRODUCT_NAME = VirtualHID64;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB91D908733DB10010E9CD /* Build configuration list for PBXNativeTarget "virtualhid" */ = {
+		1DEB91D908733DB10010E9CD /* Build configuration list for PBXNativeTarget "VirtualHID 32-bit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB91DA08733DB10010E9CD /* Debug */,
@@ -253,6 +377,15 @@
 			buildConfigurations = (
 				1DEB91DE08733DB10010E9CD /* Debug */,
 				1DEB91DF08733DB10010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC2218F5182883CA009B8C29 /* Build configuration list for PBXNativeTarget "VirtualHID 64-bit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC2218F6182883CA009B8C29 /* Debug */,
+				FC2218F7182883CA009B8C29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
